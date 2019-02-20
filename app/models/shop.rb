@@ -6,7 +6,6 @@ class Shop < ApplicationRecord
 
 has_many :staffs, dependent: :destroy
 has_many :logs, dependent: :destroy
-has_many :categories, dependent: :destroy
-has_many :nekologs, dependent: :destroy
+has_many :posts, dependent: :destroy
 
 end

@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_02_17_101840) do
 
-  create_table "categories", force: :cascade do |t|
-    t.integer "shop_id"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.integer "post_id"
     t.integer "user_id"
@@ -45,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_101840) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "shop_id"
-    t.integer "category_id"
+    t.text "category"
     t.text "title"
     t.text "body"
     t.text "image_id"
@@ -66,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_101840) do
     t.string "phone_number"
     t.text "profile_image_id"
     t.text "header_image_id"
+    t.text "system"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_shops_on_email", unique: true

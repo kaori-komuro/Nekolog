@@ -39,6 +39,7 @@ class DeviseCreateShops < ActiveRecord::Migration[5.2]
       t.string :phone_number
       t.text :profile_image_id
       t.text :header_image_id
+      t.text :system
       t.timestamps null: false
       t.timestamps null: false
     end

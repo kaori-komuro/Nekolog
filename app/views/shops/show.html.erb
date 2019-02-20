@@ -1,2 +1,25 @@
-<h1>Shops#show</h1>
-<p>Find me in app/views/shops/show.html.erb</p>
+<p><%= link_to "ログアウト", destroy_shop_session_path, method: :delete %><p>
+
+<!--ヘッダー画像 -->
+<p><%= attachment_image_tag @shop, :header_image_id, size: "800x200", fallback: "header.jpg" %></p>
+<!--ヘッダー画像 -->
+
+<!--アイコン画像 -->
+<p><%= attachment_image_tag @shop, :profile_image_id, size: "100x100", fallback: "icon.jpg" %></p>
+<!--アイコン画像 -->
+
+<!--新着投稿 -->
+ここにメニュー
+<!--新着投稿 -->
+
+<!--店舗紹介 -->
+	<p class="shop-show-name">
+			<span class= "shop-show-span-name">【<%= @shop.name %></span>
+			<span class= "shop-show-span-name-kana">/<%= @shop.name_kana %>】</span>
+	</p>
+		<p class="artist-show-member"><span class="glyphicon glyphicon-headphones artist-show-music-icon" aria-hidden="true"></span><span class= "bold">  System</span><br><%= @shop.system %></p>
+<!--店舗紹介 -->
+
+<!--新着投稿 -->
+
+<!--新着投稿 -->

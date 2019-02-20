@@ -1,3 +1,3 @@
 class Staff < ApplicationRecord
-	belongs_to :shops
+	belongs_to :shop
 end
